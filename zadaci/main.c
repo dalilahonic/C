@@ -286,17 +286,334 @@ int main() {
 
     // 4.12
 
-    int n, n1, n2 = 1;
-    printf("Koliko brojeva zelite da unesete");
-    scanf("%d", &n);
-    printf("Unesite broj: ");
-    for(int i = 1; i <= n; i++) {
-        scanf("%d", &n1);
-        if(n1 > n2) n2 = n1;
-    }
+    // int n, n1, n2 = 1;
+    // printf("Koliko brojeva zelite da unesete");
+    // scanf("%d", &n);
+    // printf("Unesite broj: ");
+    // for(int i = 1; i <= n; i++) {
+    //     scanf("%d", &n1);
+    //     if(n1 > n2) n2 = n1;
+    // }
 
-    printf("Najveci broj je %d", n2);
+    // printf("Najveci broj je %d", n2);
+
+    // 4.13
+
+    // int suma = 0, i;
+    // printf("Brojevi deljivi sa 6 \n");
+    // for(i = 1; i <= 100; i++) {
+    //     if(i % 6 == 0 ){
+    //         suma += i;
+    //         printf("\n %d", i);
+    //     }
+    // }
+    // printf("Suma je %d", suma);
+
+    // 4.14
+
+    // int i;
+    // for(i = 100; i<= 999; i++) {
+    //     int prvaCifra = i / 100;
+    //     int drugaCifra = (i / 10) % 10;
+    //     int trecaCifra = (i % 10);
+    //     if(prvaCifra + 2 == drugaCifra && drugaCifra + 1 == trecaCifra) printf("\n %d", i);
+    // }
+
+    // int a, b, c;
+    // for(a = 1; a <= 9; a++) {
+    //     for(b = 3; b <= 9; b++) {
+    //         for(c = 4; c <= 9; c++) {
+    //             if(a + 2 == b && b+1 == c) {
+    //                 printf("\n %d%d%d",a, b, c );
+    //             }
+    //         }
+    //     }
+    // }
+
+    // 4.15
+
+    // int i;
+    // printf("Amstrongovi brojevi su: ");
+    // for(i = 100; i <= 999; i++) {
+    //     int prva = i / 100;
+    //     int druga = (i / 10) % 10;
+    //     int treca = (i % 10);
+
+    //     // if(pow(prva, 3) + pow(druga, 3) + pow(treca, 3) == i) {
+    //         if(prva * prva * prva + druga * druga * druga + treca * treca * treca == i) {
+    //         printf("\n %d", i);
+    //     }
+    // }
+
+    // int a, b, c, broj;
+    // printf("Amstrongovi brojevi: ");
+    // for(a = 1; a <= 9; a++ ){
+    //     for(b = 0; b <= 9; b++) {
+    //         for(c = 0; c <= 9; c++  ){
+    //             broj = a * 100 + b * 10 + c; 
+    //             if(pow(a, 3) + pow(b, 3) + pow(c, 3) == broj) {
+    //                 printf("\n %d", broj);
+    //                 }
+
+    //         }
+    //     }
+    // }
+
+    // 4.16
+    // int i;
+    // printf("\n Brojvei su: ");
+    // for(i = 100; i <= 900; i++) {
+        // int prva = i /100;
+    //     int druga = (i % 100) / 10;
+    //     int prveDve = prva * 10 + druga;
+    //     int treca = i % 10;
+    //     if(pow(prveDve, 2) - pow(treca, 2) == i) printf("\n %d" , i);
+    // }
+
+    // 4.17
+
+    // int i;
+    // printf("Brojevi su: ");
+    // for(i = 100; i <= 999; i++) {
+    //     int prva = i /100;
+    //     int treca = i % 10;
+
+    //     if(i % (prva * 10 + treca) == 0) printf("\n %d", i);
+    // }
+
+    // int a, b, c, broj, dvocif;
+    // for(a = 1; a <= 9; a++) {
+    //     for(b = 0; b <= 9; b++) {
+    //         for(c = 0; c<= 9; c++) {
+    //             broj = a * 100 + b * 10 + c;
+    //             dvocif = a * 10 + c;
+    //             if(broj % dvocif == 0) printf("\n %d", broj);
+              
+    //         }
+    //     }
+    // }
+
+    // 4.18
+
+    // int suma = 0, i, br = 0;
+
+    // for(i = 100; i<= 999; i++) {
+    //      int prva = i /100;
+    //      int druga = (i % 100) / 10;
+    //     int treca = i % 10;
+
+    //     if(prva + druga + treca == 5) {
+    //         suma += i;
+    //         br++;
+    //     }
+    // }
+    // printf("Suma je %d i %d brojeva ima ovu osobinu", suma, br);
+
+    // 4.19
+
+    // int broj, i;
+    // printf("Unesite broj: \n");
+    // scanf("%d", &broj);
+    // printf("Delioci su: \n");
+    // for(i = 1; i <= broj; i++) {
+    //     if(broj % i == 0) printf("\n %d", i);
+    // }
+
+    // 4.20
+
+    // int suma = 0, i, broj;
+    // printf("Unesite broj: ");
+    // scanf("%d", &broj);
+
+    // for(i = 1; i < broj; i++) {
+    //     if(broj % i == 0 ) suma += i;
+    // }
+
+    // if(broj == suma) printf("Broj je savrsen");
+    // else printf("Broj nije savrsen");
+
+    // 4.21
+
+    // int ucenici, i = 0, jedan = 0, ocena;
+    // float zbirOcena = 0;
+    // printf("Unesite broj ucenika: ");
+    // scanf("%d", &ucenici);
+    // for(i = 1; i <= ucenici; i++) {
+    //     printf("Unesite ocenu %d ucenika", i);
+    //     scanf("%d", &ocena);
+
+    //     zbirOcena += ocena;
+    //     if(ocena == 1) jedan++;
+    // }
+
+    // float prosek = zbirOcena / ucenici;
+
+    // printf("Prosek ocena je %.2f", prosek);
+    // printf("\n Broj jedinica je %d", jedan);
+
+    // 4.22
+
+    // int sec, min, sat, br, prvaS, drugaS, prvaM,drugaM, prvaSec, drugaSec;
+    // printf("Uneste broj: ");
+    // scanf("%d", &br);
+    // for(sat = 0; sat <= 23; sat++) {
+    //         prvaS = sat / 10 ;
+    //         drugaS = sat % 10;
+    //     for(min = 0; min <= 60; min++) {
+    //         prvaM = min / 10;
+    //         drugaM = min % 10;
+    //         for(sec = 0; sec <= 60; sec++) {
+    //         prvaSec = sec / 10;
+    //         drugaSec = sec % 10;
+    //             if(prvaS + drugaS + prvaM + drugaM + prvaSec + drugaSec == br)  printf("\n %d sat : %d min %d sec", sat, min, sec);
+    //         }
+    //     }
+    // }
+
+    // 5.2
+
+    // int i = 1;
+    // while(i < 10) {
+    //     if(i % 2 == 0) printf("\n %d", i);
+    //     i++;
+    // }
+
+
+    //5.3
+
+    // int br, i = 1, suma = 0;
+    // printf("Unesite broj");
+    // scanf("%d", &br);
+    // while(i <= br) {
+    //     suma += i;
+    //     i++;
+    // }
+
+    // printf("Suma je %d", suma);
+
+    // 5.4
+    // int br, i = 1, suma = 0;
+    // printf("Unesite broj");
+    // scanf("%d", &br);
+    // while(i <= br) {
+    //     suma += i;
+    //     i = i + 3;
+    // }
+
+    // printf("Suma je jednaka %d", suma);
+
+    // 5.5
+    // int n, i = 1;
+    // double suma = 0;
+    // printf("Unesite broj n: ");
+    // scanf("%d", &n);
+    // while(i <= n) {  
+    //     suma += 1 / (pow(2 * i + 1, 2));
+    //     i++;
+    // }
+
+    // printf("Rezultat je: %lf", suma);
+
+
+    // 5.6
+
+    // int s = 0, n, m;
+    // printf("Unesite broj n: ");
+    // scanf("%d", &n);
+    // printf("Unesite broj m: ");
+    // scanf("%d", &m);
+    // while(n <= m) {
+    //     if(n % 2 == 0) s += n * n;
+    //     else s += pow(n, 3);
+    //     n++;
+    // }
+
+    // printf("Suma je %d", s);
+
+    // 5.7
+
+    // int n, i = 3, suma = 2;
+    // int prviBroj = 1;
+    // int drugiBroj = 1;
+    // printf("Unesite broj n: ");
+    // scanf("%d", &n);
+    // printf("\n f1 = %d", prviBroj);
+    // printf("\n f2 = %d", drugiBroj);
+
+    // while(i <=n) {
+    //     int noviBroj = prviBroj + drugiBroj;
+    //     printf("\n f%d = %d", i, noviBroj);
+    //     suma += noviBroj;
+    //     if(i % 2 == 0) prviBroj = noviBroj;
+    //     else drugiBroj = noviBroj;
+    //     i++;
+    // }
+
+    // printf("\n suma brojeva je %d", suma);
+
+    // 5.8
+
+    // int a, n, i = 0, s = 1;
+
+    // printf("Unesite broj a: ");
+    // scanf("%d", &a);
+    // printf("Unesite stepen n: ");
+    // scanf("%d", &n);
+
+    // // double reazultat = pow(a,n);
+
+    // // printf("Broj %d na %d stpen je %.0lf", a, n, reazultat);
+
+    // while(i < n) {
+    //     s *= a;
+    //     i++;
+    // }
+    // printf("Suma je %d", s);
+
+    // 5.9
+
+    // int br = 1, s = 0, brojevi = 0 ;
+
+    // while(br != 0 ) {
+    //     printf("Unesite broj: ");
+    //     scanf("%d", &br);
+    //     s += br;
+    //     brojevi++;
+    // }
+
+    // double sv = s / (brojevi - 1);
+
+    // printf("Srednja vrednost je %.2lf" , sv); 
+
+    // int brojevi = 0;
+    // float broj, suma = 0;
+
+    // printf("Unesite niz brojeva, nula za kraj");
+    // scanf("%f", &broj);
+    // while(broj != 0) {
+    //     suma += broj;
+    //     brojevi++;
+    //     scanf("%f", &broj);
+    // }
+
+    // printf("Aritmeticka sredina je %.2f", suma / brojevi);
+
+    // 5.10
+
+    // int brojevi = 0, broj, suma = 0;
+    // printf("Unesite niz brojeva, 0 za kraj: ");
+    // scanf("%d", &broj);
+    // while(broj != 0) {
+    //     if(broj >= 2 && broj <= 6) {
+    //         suma += broj;
+    //         brojevi++;
+    //     }
+    //     scanf("%d", &broj);
+    // }
+
+    // printf("Aritmeticka sredina je: %d", suma / brojevi);
 
 
     return 0;   
 }
+

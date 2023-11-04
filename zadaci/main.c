@@ -613,6 +613,256 @@ int main() {
 
     // printf("Aritmeticka sredina je: %d", suma / brojevi);
 
+    // 5.12
+
+    // int m, n, p;
+    // float suma = 0;
+    // printf("Unesite dva broja (m > n)");
+    // scanf("%d", &m);
+    // scanf("%d", &n);
+
+    // while(m<1 || n<1) scanf("%d%d",&m,&n);
+
+    // if(n > m) {
+    //     p = n;
+    //     n = m;
+    //     m = p;
+    // }
+
+    // // while(n <= m) {
+    // //     if(n % 2 != 0) suma += sqrt(n);
+    // //     n++;
+    // // }
+
+    // if(n % 2 == 0) n++;
+    // while(n <= m) {
+    //     suma += sqrt(n);
+    //     n += 2;
+
+    // }
+
+    // printf("Suma je: %.3f", suma);
+
+    // 5.13
+
+    // double suma = 0;
+    // int broj, i = 1, znak = 1;
+    // printf("Unesite broj");
+    // scanf("%d", &broj);
+    // while(i <= broj) {
+    //     suma += (float) znak / i;
+    //     i++;
+    //     znak =-znak;
+    // }
+
+    // printf("Suma je %.3lf", suma);
+
+    // 5.18
+
+    // int n, k, suma = 0;
+    // printf("Unesite broj");
+    // scanf("%d", &n);
+    // k = n;
+    // while(k > 0) {
+    //     suma += k % 10;
+    //     k /= 10;
+    // }
+
+    // if(n % suma == 0) printf("Broj jeste Nivenov");
+    // else printf("Broj nije Nivenov");
+
+    // 5.19
+
+    // int n, obrnut = 0;
+    // printf("Unesite broj");
+    // scanf("%d", &n);
+
+    // while(n > 0) {
+    //     obrnut = (obrnut * 10) + (n % 10);
+    //     n = n / 10;
+    // }
+
+    // printf("Broj je %d", obrnut);
+
+    // 6.3
+
+    // int broj;
+    // printf("Unesite broj");
+
+    // do {
+    //     scanf("%d", &broj);
+    // } while ((broj * broj <=0 || broj * broj>100));
+
+    // printf("Kvadrat broja %d pripada prvoj stotini", broj);
+
+    // 6.6
+
+    // int a, i = 2;
+    // double broj = 1;
+    // printf("Unesite broj a: ");
+    // scanf("%d", &a);
+    // do {
+    //     broj += (1.0 / i);
+    //     i++;
+
+    // }while(broj < a);
+
+    // printf("Broj %.3lf je veci od unetog broja %d", broj, a);
+    
+    // double broj;
+    // broj = 3 / 2;
+    // printf("%lf", broj); //  1.000000
+
+
+    // 6.8
+
+    // int a, b, broj = 0;
+    // while(a < 0 || a > 100 || b < 0 || b > 100) {   
+    // printf("Unesite granicu od do: ");
+    // scanf("%d %d", &a, &b);
+    // };
+
+    // int i = a;
+
+    // do {
+    //     if(i % 4 == 0) {
+    //         printf("%d ",i);
+    //         broj++;
+
+    //         if(broj == 10) {
+    //             printf("\n");
+    //             broj = 0;
+    //         }
+    //     }
+    //     i++;
+
+    // }while(i <= b );
+
+    // 6.9
+
+    // int i = 100, suma = 0, brojac = 0;
+
+    // do{
+    //     if(i % 64 == 0 ){
+    //         suma += i;
+    //         brojac++;
+    //     } 
+    //     i++;
+    // }while( i<=999);
+
+    // printf("Suma je %d i %d brojeva imaju ovu osobinu", suma, brojac);
+
+
+    // 6.10
+
+    // int m;
+    // do {
+    // printf("Unesite broj m (veci od 0 a manji od 10): ");
+    // scanf("%d", &m);
+    // } while(m < 0 || m > 10);
+
+    // int br;
+    // int n = 0;
+    // do{
+    //     scanf("%d", &br);
+    //     int pomocna = br;
+    //     while(pomocna > 10) {
+    //         pomocna = pomocna / 10;
+    //     }
+
+    //     if(pomocna == m) {
+    //         n++;
+    //     }
+
+
+    // }while(br != 0);
+
+    // printf("%d je brojeva sa ovom osobinom", n);
+
+
+    // 7.2
+
+    // int broj;
+
+    // for(;;) {
+    //     printf("\nUnesite pozitivan ceo broj");
+    //     scanf("%d", &broj);
+    //     if(broj < 0) break;
+    //     printf("\n x=%d \n x * x =%d", broj, broj * broj);
+    // }
+
+    // 7.20
+
+    // char slovo;
+    // printf("Unesite slovo: \n");
+    // scanf("%c", &slovo);
+    // switch (slovo)
+    // {
+    // case 'A':
+    // case 'E':
+    // case 'I':
+    // case 'O':
+    // case 'U':
+    // case 'a':
+    // case 'e':
+    // case 'i':
+    // case 'o':
+    // case 'u':
+    // printf("Slovo je samoglasnik");
+    //     break;
+    // default: 
+    // printf("Slovo je suglasnik");
+    // }
+
+    // 7.22
+    // float operand1, operand2;
+    // char operator;
+    //  printf("Unesite prvi operand: ");
+    // scanf("%f", &operand1);
+    // printf("Unesite drugi operand: ");
+    // scanf("%f", &operand2);
+    // printf("Unesite operator (+, -, *, /): ");
+    // scanf(" %c", &operator);
+
+    // switch(operator) {
+    //     case '+':
+    //     printf("%.2f", operand1 + operand2);
+    //     break;
+    //     case '-':
+    //     printf("%.2f", operand1 - operand2);
+    //     break;
+    //     case '*':
+    //     printf("%.2f", operand1 * operand2);
+    //     break;
+    //     case '/':
+    //     printf("%.2f", operand1 / operand2);
+    //     break;
+    // }
+
+    // 7.23
+    // int a, b;
+    // char opcija;
+    // printf("Unesite stranicu a i b: ");
+    // scanf("%d %d", &a, &b);
+    // printf(" Odaberite opciju: Obim(o), povrsina(p), duzina dijagonale(d): ");
+    // scanf(" %c", &opcija);
+
+    // float dijagonala = sqrt(a * a + b * b);
+
+    // switch(opcija) {
+    //     case 'o':
+    //     printf("Obim je %d", 2 * (a * b));
+    //     break;
+    //     case 'p':
+    //     printf("Povrsina je %d", a * b);
+    //     break;
+    //     case 'd': 
+    //     printf("Duzina dijagonale je %.2f", dijagonala);
+    //     break;
+    // }
+
+
+
 
     return 0;   
 }

@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include <math.h>
+// #include <stdio.h>
+// #include <math.h>
 
-int main() {
+// int main() {
 
     // int a = 30;
     // int b = 20;
@@ -861,9 +861,251 @@ int main() {
     //     break;
     // }
 
+    //......................................
+
+    // int a, b;
+    // printf("Unesite dva broja");
+    // scanf("%d %d", &a, &b);
+    // if(a > b) printf("Rezultat je %d", a -b);
+    // else printf("Rezultat je %d", b - a);
 
 
+    // 3.11
 
-    return 0;   
-}
 
+    // int x, y;
+    // printf("Unesite broj x");
+    // scanf("%d", &x);
+
+    // if(x > -2 && x <=2) y = 2 * x;
+    // else if(x <= 5 && x <7) y = 3 * x -1;
+    // else y = 1 / x;
+
+    // printf("y je %d", y);
+
+    // 3.12
+
+    // int x, y, z;
+    // printf("Unesite x i y: \n");
+    // scanf("%d %d", &x, &y);
+
+
+// int y = 32, 32
+
+ // 3.13
+
+//  int a, b, c, s, p ;
+
+//  printf("Unesite a, b, c: ");
+//  scanf("%d %d %d", &a, &b, &c); 
+
+//  s = (a +b+ c) /2;
+//  p =  (s * (s - a) * (s -b) * (s - c));
+//  p = sqrt(s);
+
+//  printf("Povrsina je p", p);
+
+ // 4.10
+
+//  int n;
+//  float x;
+//  s = sin(x) + pow(sin(x), 2)
+
+// int i;
+// int s = 0;
+// for(i = 3; i < 10; i++) {
+//    s += i;
+// }
+
+    // return 0;   
+// }
+
+//.........................................................................
+
+#include <stdio.h>
+#include <math.h>
+#define PI 3.14
+
+//9.1 
+
+// int zbir(int a, int b) {
+//     int rezultat;
+//     rezultat = a + b;
+//     return rezultat;
+// }
+
+// int main() {
+//     int c;
+//     c = zbir(5, 3);
+//     printf("\n %d \n", c);
+
+//     return 0;
+// }
+
+
+// 9.2
+
+// int izracunaj (float a, float b, char znak) {
+//     float c;
+//     switch (znak)
+//     {
+//     case '+':
+//     c = a + b;
+//     break;
+//     case '*':
+//     c = a * b;
+//     break;
+//     case '/':
+//     c = a / b;
+//     break;
+//     default:  
+//         break;
+//     }
+
+//     return c;
+// }
+
+// int kvadrat(double a, int stepen) {
+//     if(stepen == 2) return a * a;
+//     else if(stepen == 3) return a * a * a;
+// }
+
+// int main() {
+//     double x, y;
+//     printf("unesite promenljive x i y");
+//     scanf("%lf %lf", &x, &y);
+
+//     double z1, z2, z3;
+//     z1 = izracunaj(x, kvadrat(y, 2), '+');
+//     z2 = kvadrat(x, 3) - izracunaj(x, y, '/');
+//     z3 = izracunaj(x, y, '*') + 5 - y;
+
+//     printf("\n %lf \n %lf \n %lf", z1, z2, z3 );
+
+//     return 0;
+// }
+
+// 9.3
+
+// int maksimum (int a, int b) {
+//     if(a > b) return a;
+//     else if(b > a) return b;
+//     else return a;
+// }
+
+// int main() {
+//     int a, b, c ,d;
+//     int max1, max2;
+//     printf("Unesite 4 broja: ");
+//     scanf("%d %d %d %d", &a, &b, &c, &d );
+//     max1 = maksimum(a, b);
+//     max2 = maksimum(c, d);
+//     printf("Najveci broj je %d", maksimum(max1, max2));
+//     return 0;
+// }
+
+// double povrsina(double r) {
+//     return 4 * PI * r * r;
+// }
+
+// double zapremina(double r) {
+//     return ((4./3.) * PI * r * r * r);
+// }
+
+// void ispis(double povrsina, double zapremina) {
+//     printf("Povrsina je %lf a zapremina %lf", povrsina, zapremina);
+// }
+
+// int main() {
+//     double r;
+//     printf("unesite poluprecnik r: ");
+//     scanf("%lf", &r);
+//     ispis(povrsina(r), zapremina(r));
+//     return 0;
+// }
+
+// 9.7
+
+// void zbirKvadrata(int a, int b) {
+//     int parni = 0, neparni = 0, svi = 0;
+//     for(int i = a; i <= b; i++) {
+//         svi += i * i;
+//         if(i % 2 == 0) parni += i * i;
+//         else neparni += i * i;
+//     }
+//     printf("Zbir svih brojeva je %d \n", svi);
+//     printf("Zbir parnih je %d \n", parni);
+//     printf("Zbir neparnih je %d", neparni);
+// }
+
+// int main() {
+//     int a, b;
+//     printf("Unesite gornju i donju granicu: ");
+//     scanf("%d %d", &a, &b);
+//     zbirKvadrata(a, b);
+//     return 0;
+// }
+
+// 9.8
+
+// void suma(int a, int b) {
+//     for(int i = a; i <= b; i++) {
+//     int broj = i, suma = 0;
+//         while(broj != 0) {
+//             suma+= broj % 10;
+//             broj = broj / 10;
+//         }
+//         printf("%d = %d \n", i, suma);
+//     }
+// }
+
+// int main() {
+//     int a, b;
+//     printf("Unesite granice: ");
+//     scanf("%d %d", &a, &b);
+//     suma(a, b);
+//     return 0;
+// }
+
+// 9.10
+
+// int faktorijel(int a) {
+//     int suma = 1;
+//     for(int i = a; i > 0; i--) {
+//         suma *= i;
+//     }
+
+//     return suma;
+// }
+
+// int main() {
+//     int n, k, rezultat;
+//     printf("Unesite brojeve n i k: ");
+//     scanf("%d %d", &n, &k);
+//     rezultat = (faktorijel(n)) / (faktorijel(k) * faktorijel(n -k));
+//     printf("Rezultat je %d",rezultat); 
+//     return 0;
+// }
+
+// 9.11
+
+// long faktorijel(int n) {
+//     long suma = 1;
+//     for(int i = n; i > 0; i--) {
+//         suma *= i;
+//     }
+//     return suma;
+// }
+
+// int main() {
+//     long suma = 0;
+//     int n;
+//     printf("Unesite broj n: ");
+//     scanf("%d", &n);
+//     for(int i = 1; i <= n; i++) {
+//         suma += faktorijel(i);
+//     }
+
+//     printf("suma je %ld", suma);
+//     return 0;
+// }

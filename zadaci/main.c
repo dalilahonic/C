@@ -1109,3 +1109,88 @@
 //     printf("suma je %ld", suma);
 //     return 0;
 // }
+
+//9.12
+
+// long faktorijel(int a) {
+//     long suma = 0;
+//     while(a > 0) {
+//         int cifra = 1;
+//         int b = a % 10;
+//         for(int i = b; i > 0; i--) {
+//             cifra *= i;
+//         }
+//         suma += cifra;
+//         a = a / 10;
+//     }
+
+//     return suma;
+// }
+
+// int main() {
+//     for(int i = 100; i <= 999; i++) {
+//         if(faktorijel(i) == i) printf("\n %ld", faktorijel(i));
+//     }
+//     return 0;
+// }
+
+// 9.13
+
+// long stepenovanje(int broj, int stepen) {
+//     long suma = 1;
+//     for(int i = 1; i <= stepen; i++) {
+//         suma *= broj;
+//     }
+//     return suma;
+// }
+
+// int main() {
+//     int broj, stepen;
+//     printf("Unesite broj i stepen: ");
+//     scanf("%d %d", &broj, &stepen);
+//     long rezultat = stepenovanje(broj, stepen);
+//     printf("Rezultat je %ld", rezultat);
+// }
+
+// 9.15
+
+// int prosti(int broj) {
+//     for(int i = 2; i <= broj; i++) {
+//         if(broj % i == 0 && i != broj) return 0;
+//     }
+//     return 1;
+// }
+
+// int main() {
+//     for(int i = 1; i <= 500; i++) {
+//         int rezultat = prosti(i);
+//         if(rezultat == 1) printf("\n %d", i);
+//     }
+//     return 0;
+// } 
+
+//9.17
+ 
+// int kubovi(int broj) {
+//     return broj * broj * broj;
+// }
+
+// int amstrongov(int broj) {
+//     int suma = 0;
+//     int trocifreni = broj;
+//     while(trocifreni > 0) {
+//     int cifra = trocifreni % 10;
+//     suma += kubovi(cifra);
+//     trocifreni = trocifreni / 10;
+//     }
+//     if(suma == broj) return 1;
+//     else return 0;
+// }
+
+// int main() {
+//     for(int i = 100; i <= 999; i++) {
+//         int rezultat = amstrongov(i);
+//         if(rezultat == 1) printf("\n %d", i);
+//     }
+//     return 0;
+// }

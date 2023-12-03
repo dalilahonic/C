@@ -1194,3 +1194,126 @@
 //     }
 //     return 0;
 // }
+
+// 9.18
+
+// int sumaCifara(int broj) {
+//     int cifra;
+//     int suma = 0;
+//     while(broj > 0) {
+//         cifra = broj % 10;
+//         suma += cifra;
+//         broj /= 10;
+//     }
+//     return suma;
+// }
+
+// int nivenov(int broj) {
+//     int suma = sumaCifara(broj);
+//     if(broj % suma == 0) return 1;
+//     else return 0;
+// }
+
+// int main() {
+//     for(int i = 101; i <= 200; i++) {
+//         if(nivenov(i) == 1) printf("\n %d", i);
+//     }
+
+//     return 0;
+// }
+
+// 9.20
+
+// int Faktorijel(int n) {
+//     if(n == 1) return 1;
+//     return n*Faktorijel(n-1);
+// }
+    
+    
+//     int main() {
+//     int n;
+//     printf("n= ");
+//     scanf("%d", &n);
+//     printf("%d!= %d", n, Faktorijel(n));
+//     return 0;
+// }
+
+// 9.30
+
+// int stepenovanje(int broj, int stepen) {
+//     if (stepen == 0) return 1;
+//     return broj * stepenovanje(broj, stepen - 1);
+// }
+
+// int main() {
+//     int broj, stepn;
+//     printf("Unesite broj i stepen: ");
+//     scanf("%d %d", &broj, &stepn);
+//     printf("\n%d", stepenovanje(broj, stepn));
+//     return 0;
+// }
+
+// 9.31
+
+// int sabiranje(int broj) {
+//     if(broj == 1) return 1;
+//     return broj + sabiranje(broj - 1);
+// }
+
+// int main() {
+//     int n;
+//     printf("unesite broj: ");
+//     scanf("%d", &n);
+//     printf("%d", sabiranje(n));
+//     return 0;
+// }
+
+// 9.32
+
+// int ispis(int n) {
+//     if(n == 0) return 0;
+//     printf("%d ", n);
+//     return ispis(n -1);
+// }
+
+// int main() {
+//     int x;
+//     printf("Unesite broj");
+//     scanf("%d", &x);
+//     ispis(x);
+//     return 0;
+
+// }
+
+// 9.34
+
+// int saberiCifre(int n) {
+//     if(n < 10) return n;
+//     return n % 10 + saberiCifre(n / 10);
+// }
+
+// int main() {
+//     int x;
+//     printf("Unesite broj: ");
+//     scanf("%d", &x);
+//     printf("%d", saberiCifre(x));
+//     return 0;
+// }
+
+// 10.4
+
+// int main() {
+//     int n, i;
+//     printf("Unesite broj elementa u nizu: ");
+//     scanf("%d", &n); 
+//     int niz[n - 1];
+//     for(i = 1; i <= n; i++) {
+//         printf("\nElement %d:", i);
+//         scanf("%d", &niz[i - 1]);
+//     }
+//     for(i = 0; i < n; i++) {
+//         printf("%d ", niz[i]);
+//     }
+//     return 0;
+// }
+

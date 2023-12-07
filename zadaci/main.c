@@ -1317,3 +1317,154 @@
 //     return 0;
 // }
 
+// 10.5
+
+// #define MAX 100
+
+// int main() {
+// int n, niz[MAX];
+
+// printf("Unesite broj elementa: ");
+// scanf("%d", &n);
+// for(int i = 0; i < n; i++) {
+//     printf("unesite element %d: ", i + 1);
+//     scanf("%d", &niz[i]);
+// }
+
+// printf("Obrnuto: ");
+// for(int i = n - 1; i >= 0; i--) {
+//     printf("%d ", niz[i]);
+// }
+
+// return 0;
+// }
+
+// 10.7
+
+// int main() {
+//     int n, niz[MAX], suma = 0;
+//     float as;
+//     printf("Ispisite broj elemenata: ");
+//     scanf("%d", &n);
+//     for(int i = 0; i < n; i++) {
+//         scanf("%d", &niz[i]);
+//     }
+//     printf("Elementi niza: ");
+
+//     for(int i = 0; i < n; i++) {
+//         printf("%d ", niz[i]);
+//         suma += niz[i];
+//     }
+//     as = (float)suma / n;
+//     printf("\n Aritmeticka sredina: %f", as);
+
+// 10.8
+
+// int deljivi = 0;
+
+// for(int i = 0; i < n; i++) {
+//     if(niz[i] % 3 == 0) {
+//         suma += niz[i];
+//         deljivi++;
+//     }
+// }
+
+// printf("\nAritmeticka sredina je: %f", (float)suma / deljivi);
+
+// 10.9 a
+
+// int sumaParni = 0, sumaNeparni = 0;
+
+// for(int i = 0; i < n; i++) {
+//     if(niz[i] % 2 == 0)  sumaParni += niz[i];
+//      else sumaNeparni += niz[i];
+// }
+
+// printf("\nSuma parnih je %d", sumaParni);
+// printf("\nSuma neparni je %d", sumaNeparni);
+
+//10.9 b
+
+// int sumaParni = 0, sumaNeparni =0;
+
+// for(int i = 0; i < n; i++) {
+//     if(i % 2 == 0) sumaParni += niz[i];
+//     else sumaNeparni += niz[i];
+// }
+
+// printf("\nSuma elemenata sa parnim indeskom je %d", sumaParni);
+// printf("\nSuma elemenata sa neparnim indeskom je %d", sumaNeparni);
+
+//     return 0;
+// }
+
+// 10.10
+
+// #define MAX 100
+
+// int main() {
+// float niz1[MAX], niz2[MAX];
+// int n;
+// float suma = 0;
+
+// printf("Unesite broj elemenata niza: ");
+// scanf("%d", &n);
+
+// for(int i = 0; i < n; i++) {
+//     scanf("%f", &niz1[i]);
+// }
+
+// printf("Drugi niz: ");
+
+// for(int i = 0; i < n; i++) {
+//     scanf("%f", &niz2[i]);
+// }
+
+// for(int i = 0; i < n; i++) {
+//     suma += niz1[i] * niz2[i];
+// }
+
+// printf("Skalarni proizvod je %f", suma);
+
+// return 0;
+
+// }
+
+// 10.15
+// #define MAX 100
+
+// int main() {
+//     int niza[MAX], nizb[MAX], nizc[MAX], n, m, index = 0;
+//     printf("Duzina prvog niza: ");
+//     scanf("%d", &n);
+//     for(int i = 0; i < n; i++) {
+//         scanf("%d", &niza[i]);
+//     }
+//     printf("Duzina drugog niza: ");
+//     scanf("%d", &m);
+//     for(int i = 0; i < m; i++) {
+//         scanf("%d", &nizb[i]);
+//     }
+
+//     for(int i = 0; i < n; i++) {
+//         if(niza[i] % 2 == 0) {
+//             nizc[index] = niza[i];
+//             index++;
+//         }
+//     }
+//     for(int i = 0; i < m; i++) {
+//         if(nizb[i] % 2 == 0) {
+//             nizc[index] = nizb[i];
+//             index++;
+//         }
+//     }
+
+//     printf("Elementi niza su: ");
+//     for(int i = 0; i < index; i++) {
+//         printf("%d ", nizc[i]);
+//     }
+
+//     return 0;
+// }
+
+

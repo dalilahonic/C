@@ -1998,3 +1998,305 @@
 //
 
 // 11.5
+
+// int main() {
+//     int matrica[MAX][MAX], n, sumaGlavnaDijagonala = 0, sporednaDi = 0;
+
+//     printf("Unesite duzinu redova i kolona: ");
+//     scanf("%d", &n);
+
+//     for(int i = 0; i < n; i++) {
+//         for(int j = 0; j < n; j++) {
+//             scanf("%d", &matrica[i][j]);
+//         }
+//     }
+
+//     printf("Elementi glavne dijagonale: ");
+
+//     for(int i = 0; i < n; i++) {
+//         printf("%d ", matrica[i][i]);
+//         sumaGlavnaDijagonala += matrica[i][i];
+//     }
+
+//     printf("Elementi sporedne dijagonele: ");
+
+//     for(int i = 0, j = n -1; i < n; i++, j--) {
+//         printf("%d ", matrica[i][j]);
+//         sporednaDi += matrica[i][j];
+//     }
+
+//     printf("\nSuma elemenata glavne dijagonele je %d", sumaGlavnaDijagonala);
+//     printf("\nSuma elemenata sporedne dijgaonale je %d", sporednaDi);
+// }
+
+
+// 11.8
+
+//00 10 20 30 
+//31 21 11 01  
+//02 12 22 32
+//33 23 13 03
+
+// int main() {
+//     int matrica[MAX][MAX], m, n;
+
+//     printf("Unesite broj kolona: ");
+//     scanf("%d", &m);
+//     printf("Unesite broj redova: ");
+//     scanf("%d", &n);
+
+//     for(int i = 0; i < m; i++) {
+//         for(int j = 0; j < n; j++) {
+//             scanf("%d", &matrica[i][j]);
+//         }
+//     }
+
+//     for(int i = 0; i < n; i++) {
+//         if(i % 2 == 0) {
+//         for(int j = 0; j < m; j++) {
+//             printf("%d ", matrica[j][i]);
+//         }
+//         } else {
+//             for(int j = m - 1; j >= 0; j--) {
+//                 printf("%d ", matrica[j][i]);
+//             }
+//         }
+//     }
+// }
+
+// 11.9
+
+// int main() {
+//     float matrica[MAX][MAX];
+//     int redovi, kolone;
+
+//     printf("Unesite broj kolona: ");
+//     scanf("%d", &kolone);
+//     printf("Unesite broj redova: ");
+//     scanf("%d", &redovi);
+
+//     for(int i = 0; i < kolone; i++) {
+//         for(int j = 0; j < redovi; j++) {
+//             scanf("%f", &matrica[i][j]);
+//         }
+//     }
+
+//     float novaMatrica[kolone][redovi];
+//     float dijagonalni;
+
+//     for(int i = 0; i < kolone; i++) {
+//         dijagonalni = matrica[i][i];
+//         for(int j = 0; j < redovi; j++) {
+//             if(dijagonalni == 0) {
+//                 if(j ==i) {
+//                     novaMatrica[i][j] = 1;
+//                 } else {
+//                 novaMatrica[i][j] = 0;
+//                 }
+//             } else {
+//             novaMatrica[i][j] = matrica[i][j] / dijagonalni;
+//             }
+//         }
+//     }
+
+//     for(int i = 0; i < kolone; i++) {
+//         for (int j = 0; j < redovi; j++) {
+//             printf("%.2f ", novaMatrica[i][j]);
+//         }
+//         printf("\n");
+//     }
+// }
+
+// 11.10
+
+// int main() {
+//     int matrica[MAX][MAX], kolone, novaMatrica[MAX][MAX], x;
+
+//     printf("Unesite broj kolona: ");
+//     scanf("%d", &kolone);
+
+//         for(int i = 0; i < kolone; i++) {
+//             for(int j = 0; j < kolone; j++) {
+//             scanf("%d", &matrica[i][j]);
+//         }
+//     }
+
+//     printf("Vrednost x: ");
+//     scanf("%d", &x);
+
+//     for(int i = 0; i < kolone; i++) {
+//         for(int j = 0; j < kolone; j++) {
+//             if(i == j) {
+//                 novaMatrica[i][j] = matrica[i][j];
+//             }
+//             if(j < i) novaMatrica[i][j] = matrica[i][j] + x;
+//             if(j > i) novaMatrica[i][j] = matrica[i][j] + 2 * x;
+//         }
+//     }
+
+//     for(int i = 0; i < kolone; i++) {
+//         for (int j = 0; j < kolone; j++)
+//         {
+//             printf("%d ", novaMatrica[i][j]);
+
+//         }
+
+//         printf("\n");
+        
+//     }
+// }
+
+// 11.11
+
+// int main() {
+//     int matrica[MAX][MAX], kolone, vrste, x, y;
+
+//     printf("Unesite broj kolona: ");
+//     scanf("%d", &kolone);
+//     printf("Unesite broj vrsta: ");
+//     scanf("%d", &vrste);
+
+//         for(int i = 0; i < vrste; i++) {
+//             for(int j = 0; j < kolone; j++) {
+//             scanf("%d", &matrica[i][j]);
+//         }
+//     }
+
+//     printf("Unesite brojeve kolona koje zelite da zamenite: ");
+//     scanf("%d %d", &x, &y);
+
+//     int pomocna;
+
+//     for(int i = 0; i < vrste; i++) {
+//         pomocna = matrica[i][x - 1];
+//         matrica[i][x - 1] = matrica[i][y - 1];
+//         matrica[i][y - 1] = pomocna;
+//     }
+
+// for(int i = 0; i < vrste; i++) {
+//     for(int j = 0; j < kolone; j++) {
+//         printf("%d ", matrica[i][j]);  
+//     }
+//     printf("\n");
+// }
+
+// }
+
+#include <ctype.h>
+#include <string.h>
+
+// int main() {
+//     char niz[] = {'a', 'b', 'c', 'd', 'e', '\0'};
+
+//     int i = 0;
+//     while(niz[i] != '\0') {
+//         putchar(niz[i]);
+//         i++;
+//     }
+
+//     printf("%s ", niz);
+
+//     char noviNiz[] = "neka rec";
+//         i = 0;
+
+//     while(niz[i] != '\0') {
+//         putchar(noviNiz[i]);
+//         i++;
+//     }
+
+//     printf("%s", noviNiz);
+
+// }
+
+// int main() {
+    // char string[MAX];
+    // printf("Unesite tekst: ");
+    // scanf("%s", string);
+    // printf("\n%s", string);
+
+    // char drugiString[MAX];
+    // printf("\nUnesite tekst: ");
+    // gets(drugiString);
+    // printf("%s", drugiString);
+
+    // char string[MAX];
+    // printf("Unesite tekst: ");
+    // gets(string);
+    // puts(string);
+
+    // char string[MAX];
+    // puts("Unesite string");
+    // gets(string);
+    // printf("%s", string);
+
+// }
+
+// int main() {
+//  char *string[] = {"Operatori", "Ciklusi", "Skokovi", "Karakteri", "Nizovi",
+// "Matrice", "Stringovi", "Pokazivaci", "Strukture", "Datoteke"};
+
+// int n;
+// puts("Upisite poglavlje: ");
+// scanf("%d", &n);
+
+// puts(string[n - 1]);
+
+// }
+
+// int main() {
+//     char str[] = {'a', 'b' , 'c'};
+//     int brElem = sizeof(str);
+//     printf("%d", brElem);
+
+   
+// }
+
+// 1.8
+
+// int main() {
+    // char string[MAX];
+    // printf("Unesite string: ");
+    // gets(string);
+
+    // int i;
+
+    // for(i = 0; string[i] != '\0';){
+    //     i++;
+    // }
+
+    // printf("%d", i);
+
+//     char string[MAX];
+//     printf("Unesite string: ");
+//     gets(string);
+//     int n = strlen(string);
+//     printf("%d", n);   
+// }
+
+// int main() {
+//     char s1[MAX], s2[MAX];
+//     printf("Prvi string: ");
+//     gets(s1);
+//     printf("Drugi string: ");
+//     gets(s2);
+
+//     // if(strcmp(s1, s2) == 0) printf("Stringovi su jednaki");
+//     // else if(strcmp(s1, s2) > 0) printf("Prvi string je veci od drugog ");
+//     // else printf("Drugi string je veci od prvog");
+
+//     if(strncmp(s1, s2, 3) == 0) printf("Prva 3 slova su ista");
+//     else printf("Nisu ista");
+// }
+
+// int main() {
+//     char prvi[MAX], drugi[MAX];
+
+//     printf("unesite prvi string: ");
+//     gets(prvi);
+//     printf("Unesite drugi string: ");
+//     gets(drugi);
+
+//     printf("Novi string: ");
+//     strcpy(prvi, drugi);
+//     printf("%s", prvi);
+//     }

@@ -1431,6 +1431,128 @@
 
 // }
 
+// 10.12
+
+    // int main() {
+    //     int nizA[MAX], nizB[MAX], nizC[MAX];
+    //     int n, m;
+
+    //     printf("Unesite broj elemenata prvog niza: ");
+    //     scanf("%d", &n);
+    //     for(int i = 0; i < n; i++ ) {
+    //         printf("Unesite element: ");
+    //         scanf("%d", &nizA[i]);
+    //     }
+
+    //     printf("Unesite broj elemenata drugog niza: ");
+    //     scanf("%d", &m);
+    //     for(int i = 0; i < m; i++ ) {
+    //         printf("Unesite element: ");
+    //         scanf("%d", &nizB[i]);
+    //     }
+
+    //     int x = 0;
+
+    //     for(int i = 0; i < n; i++) {
+    //         nizC[x] = nizA[i];
+    //         x++;
+    //     }
+
+    //     for(int i = 0; i < m; i++) {
+    //         nizC[x] = nizB[i];
+    //         x++;
+    //     }
+
+    //     printf("Elementi niza C: ");
+
+    //     for(int i = 0; i < n + m; i++) {
+    //         printf("%d", nizC[i]);
+    //     }
+
+    //     return 0;
+    // }
+
+    // 10.12
+
+    // void napraviNiz(int brojElemenata, int *niz) {
+    //     for(int i = 0; i < brojElemenata; i++) {
+    //         printf("Unesite element: ");
+    //         scanf("%d", &niz[i]);
+    //     }
+    // }
+
+    // int main() {
+
+    //     int nizA[MAX], nizB[MAX], n;
+    //     int nizC[MAX];
+    //     printf("Unesite broj elemenata niza:");
+    //     scanf("%d", &n);
+
+    //     printf("Prvi niz: ");
+    //     napraviNiz(n, nizA);
+    //     printf("Drugi niz: ");
+    //     napraviNiz(n, nizB);
+
+    //     // for(int i = 0; i < n; i++) {
+    //     //     printf("%d", nizA[i]);
+    //     // }
+
+    //     for(int i = 0; i < n; i++) {
+    //         nizC[i] = nizA[i] + nizB[i];
+    //         printf("%d", nizC[i]);
+    //     }
+
+    //     return 0;
+    // }
+
+    // 10.13
+
+    // void napraviNiz(int brojEl, int *niz) {
+    //     for(int i = 0; i < brojEl; i++) {
+    //         printf("unesite element %d", i + 1);
+    //         scanf("%d", &niz[i]);
+    //     }
+    // }
+
+    // int main() {
+    //     int nizA[MAX], nizB[MAX];
+    //     double nizC[MAX];
+    //     int n;
+
+    //     printf("unesite broj elemenata: ");
+    //     scanf("%d", &n);
+
+    //     napraviNiz(n, nizA);
+    //     napraviNiz(n, nizB);
+
+    //     for(int i = 0; i < n; i++) {
+    //         nizC[i] = (double)(pow(nizA[i], 3) / 3) + 2 * nizA[i] * nizB[i];
+    //         printf("%f", nizC[i]);
+    //     }
+    // }
+
+    // 10.14
+
+    // void napraviNiz(int brEl, int *niz) {
+    //     for(int i = 0; i < brEl; i++) {
+    //         scanf("%d", &niz[i]);
+    //     }
+    // }
+
+    // int main() {
+    //     int nizA[MAX], nizB[MAX], nizC[MAX], n = 5;
+        
+    //     printf("Elementi niza A: ");
+    //     napraviNiz(n, nizA);
+    //     printf("Elementi niza B: ");
+    //     napraviNiz(n, nizB);
+
+    //     for(int i = 0, j = n -1; i < n; i++, j--) {
+    //         nizC[i] = nizA[i] + nizB[j];
+    //         printf("%d ", nizC[i]);
+    //     }
+    // }
+
 // 10.15
 // #define MAX 100
 
@@ -1499,6 +1621,44 @@
     
 
 // return 0;
+// }
+
+// 10.17
+
+// int main() {
+//     int nizA[MAX], nizB[MAX], nizC[MAX];
+//     int n;
+
+//     printf("Koliko elemenata niza A: ");
+//     scanf("%d", &n);
+
+//     for(int i = 0; i < n; i++) {
+//         scanf("%d", &nizA[i]);
+//     }
+
+//     int negativni = 0, pozitivni = 0;
+
+//     for(int i = 0; i < n; i++) {
+
+//         if(nizA[i] < 0) {
+//             nizB[negativni] = nizA[i];
+//             negativni++;
+//         } else {
+//             nizC[pozitivni] = nizA[i];
+//             pozitivni++;
+//         }
+//     }
+
+//     printf("Niz B: ");
+//     for(int i = 0 ; i < negativni; i++) {
+//         printf("%d", nizB[i]);
+//     }
+
+//     printf("Niz C: ");
+    
+//     for(int i = 0; i < pozitivni; i++) {
+//         printf("%d ", nizC[i]);
+//     }
 // }
 
 // 10.18
@@ -1760,6 +1920,23 @@
     
 // }
 
+// 10.26 <3
+
+// int main() {
+//     int niz[MAX];
+
+//     int n;
+
+//     printf("Unesit broj permutacija: ");
+//     scanf("%d", &n);
+    
+//     for(int i = 0; i < n; i++) {
+
+
+
+//     }
+// }
+
 // 10.27
 
 // int main() {
@@ -1819,6 +1996,82 @@
 //     }
 // }
 
+// 10.29
+
+// int main() {
+//     int n, nizA[MAX];
+
+//     printf("Unesite broj elemenata: ");
+//     scanf("%d", &n);
+
+//     for(int i = 0; i < n; i++){
+//         printf("Unesite element: \n");
+//         scanf("%d", &nizA[i]);
+//     }
+
+//     int najmanji;
+
+//     for(int i = 0; i < n; i++) {
+//         if(nizA[i] % 2 == 0) {
+//             najmanji = nizA[i];
+//             break;
+//         }
+//     }
+
+//     for(int i = 0; i < n; i++) {
+//         if(nizA[i] % 2 == 0) {
+//             if(nizA[i] < najmanji) najmanji = nizA[i];
+//         }
+//     }
+
+//     printf("Najmanji element je %d", najmanji);
+// }
+
+// 10.30
+
+// int main() {
+//     int n, nizA[MAX];
+//     printf("Unesitre broj elemenata: ");
+//     scanf("%d", &n);
+//     for(int i = 0; i < n; i++) {
+//         printf("Unesite element %d", i + 1);
+//         scanf("%d", &nizA[i]);
+//     }
+
+//     int maksimalna = nizA[0];
+
+//     for(int i = 1; i < n; i = i + 2 ) {
+//         if(nizA[i] > maksimalna ) maksimalna = nizA[i];
+//     }
+
+//     printf("ELement maksimalna vrednost jeste: %d", maksimalna);
+
+// }
+
+// 10.31
+
+// int main() {
+
+//     int niz[MAX], n;
+//     printf("Broj elemenata niza: ");
+//     scanf("%d", &n);
+//     for(int i = 0; i < n; i++) {
+//         printf("Element: \n");
+//         scanf("%d", &niz[i]);
+//     }
+
+//     for(int i = 2; i < n; i++) {
+//         if(niz[i] != niz[i - 1] + niz[i - 2]) {
+//             printf("Niz nije Fibonacijev! ");
+//             break;
+//         } 
+
+//         if(i + 1 == n) {
+//         printf("Jeste finbonacijev");
+//         }
+//     }
+// }
+
 // 10.32
 
 // int main() {
@@ -1842,6 +2095,58 @@
 //     printf("Trazeni element nije naden");
 //     return 1;
 // }
+
+// 10.33
+
+// int main() {
+//     int niz[MAX], n, trazeni;
+
+//     printf("Unesite broj elementa: ");
+//     scanf("%d", &n);
+
+//     for(int i = 0; i < n; i++) {
+//         scanf("%d", &niz[i]);
+//     }
+
+//     printf("Trazeni element: ");
+//     scanf("%d", &trazeni);
+
+//     for(int i = 0; i < n; i++) {
+//         if(niz[i] == trazeni) {
+//             printf("Pozicija trazenog elementa je %d", i);
+//             break;
+//         }
+    
+//     if(i + 1 == n) {
+//         printf("Trazeeni element ne postoji");
+//     }
+
+//     }
+
+// }
+
+// 10.34
+
+// int main() {
+//     int niz[MAX], nizB[MAX], n;
+
+//     printf("Broj elemenata niza: ");
+//     scanf("%d", &n);
+
+//     for(int i = 0; i < n; i++) {
+//         printf("Element \n");
+//         scanf("%d", &niz[i]);
+//     }
+
+//     for(int i = n - 1, j = 0; i >= 0; i--, j++) {
+//         nizB[j] = niz[i];
+//     }
+
+//     for(int i = 0; i < n; i++) {
+//         printf("%d \n", nizB[i]);
+//     }
+// }
+
 
 // 10.35
 
@@ -1873,6 +2178,8 @@
 //         printf("%d ", niz[i]);
 //     }
 // }
+
+
 
 // 10.38 
 

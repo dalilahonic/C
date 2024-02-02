@@ -2179,7 +2179,66 @@
 //     }
 // }
 
+// 10.36
 
+// 123456
+// 345612
+// 6 - duzina 2 - pomeraj
+// 2 u levo a ako je manje od dva onda za 6 - 2 u desno
+
+// int main() {
+
+//     int niz[MAX], noviNiz[MAX], x, n;
+//     printf("Unesite duzinu niza: ");
+//     scanf("%d", &n);
+
+//     for(int i = 0; i < n; i++) {
+//         printf("Element: ");
+//         scanf("%d", &niz[i]);
+//     }
+    
+//     printf("Unesite broj: ");
+//     scanf("%d", &x);
+
+//     for(int i = 0; i < n; i++ ){
+//         if(i < x) {
+//             noviNiz[i + (n - x)] = niz[i];
+        
+//         } else if (i >= x) {
+//             noviNiz[i - x] = niz[i];
+//         }
+//     }
+
+//     for(int i = 0; i < n; i++) {
+//         printf("%d ", noviNiz[i]);
+//     }
+
+// }
+
+// 10.37
+
+// int main() {
+//     int duzina, niz[MAX], noviNiz[MAX];
+
+//     printf("Unesite duzinu niza: ");
+//     scanf("%d", &duzina);
+
+//     for(int i = 0; i < duzina ; i++) {
+//         scanf("%d", &niz[i]);
+//     }
+
+//     for(int i = 0; i < duzina; i++) {
+//         if(i % 2 == 0 ) {
+//             noviNiz[i] = niz[i + 1];
+//         } else {
+//             noviNiz[i] = niz[i - 1];
+//         }
+//     }
+
+//     for(int i = 0; i < duzina; i++) {
+//         printf("%d ", noviNiz[i]);
+//     }
+// }
 
 // 10.38 
 
@@ -2216,6 +2275,109 @@
 //     }
 // }
 
+// 10.39
+// Selection Sort - metoda izbora
+
+// int main() {
+
+//     int n, niz[MAX];
+
+//     printf("Unesite duzinu niza: ");
+//     scanf("%d", &n);
+
+//     for(int i = 0; i < n; i++) {
+//         scanf("%d", &niz[i]);
+//     }
+
+//     int temp;
+
+//     for(int i = 0; i < n - 1; i++) {
+//         for(int j = i + 1; j < n; j++) {
+//             if(niz[i] > niz[j])  {
+//                 temp = niz[i];
+//                 niz[i] = niz[j];
+//                 niz[j] = temp;
+//             }
+//         }
+//     }
+
+//     printf("Sortirani niz: \n");
+
+//     for(int i = 0; i < n; i++) {
+//         printf("%d ", niz[i]);
+//     }
+// }
+
+// 10.41
+
+// int main() {
+//     int n, niz[MAX];
+
+//     printf("Unesite duzinu niza: ");
+//     scanf("%d", &n);
+
+//     for(int i = 0; i < n; i++) {
+//         scanf("%d", &niz[i]);
+//     }
+
+//     int pomocna;
+
+//     int sortiran = 0;
+
+
+//    while(sortiran == 0) {
+
+//     int broj = 0;
+
+//     for(int i = 0; i < n; i++) {
+//         if(niz[i + 1] < niz[i]) {
+//             pomocna = niz[i];
+//             niz[i] = niz[i + 1];
+//             niz[i + 1] = pomocna;
+//             broj++;
+//         }
+      
+//     }
+//       if(broj == 0) {
+//             sortiran = 1;
+//         }
+//    }
+
+//    for(int i = 0; i < n; i++) {
+//     printf("%d ", niz[i]);
+//    }
+// }
+
+// 10.41 
+// Bubble Sort - Metod mehurica
+
+// int main() {
+//     int n, niz[MAX], pom;
+//     printf("Unesite duzinu niza: ");
+//     scanf("%d", &n);
+
+//     for(int i = 0; i < n; i++) {
+//         scanf("%d", &niz[i]);
+//     }
+
+//     for(int i = n - 1; i > 0; i--) {
+//         for(int j = 0; j < i; j++) {
+//             if(niz[j] > niz[j + 1]) {
+//                 pom = niz[j];
+//                 niz[j] = niz[j + 1];
+//                 niz[j + 1] = pom;
+//             }
+//         }
+//     }
+
+//     printf("Sortirani niz: \n");
+
+//     for(int i = 0; i < n; i++) {
+//         printf("%d ", niz[i]);
+//     }
+// }
+
+
 // 10.42
 
 // int main() {
@@ -2248,7 +2410,6 @@
 //     for(int i = 0; i < n + 1; i++) {
 //         printf("%d ", uredenNiz[i]);
 //     }
-
 // }   
 
 // 10.43
@@ -2303,6 +2464,31 @@
 //     }
 // }
 //
+
+// 10.44
+
+int main() {
+    int n, niz[MAX], pom;
+
+    printf("Unesite duzinu niza: ");
+    scanf("%d", &n);
+
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &niz[i]);
+    }
+
+    for(int i = n - 1; i > 0 ; i--) {
+        for(int j = 0; j < i; j++) {
+            if(niz[j] > niz[j + 1]) {
+                pom = niz[j];
+                niz[j] = niz[j + 1];
+                niz[j + 1] = pom;
+            }
+        }
+    }
+
+    
+}
 
 // 11.5
 
@@ -2605,5 +2791,5 @@
 
 //     printf("Novi string: ");
 //     strcpy(prvi, drugi);
-//     printf("%s", prvi);
+//     printf("%s", prvi);s
 //     }

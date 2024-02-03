@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 #define MAX 100
+#include <ctype.h>
+#include <string.h>
 
 // int main() {
 
@@ -2467,28 +2469,69 @@
 
 // 10.44
 
-int main() {
-    int n, niz[MAX], pom;
+// int main() {
+//     int n, niz[MAX], pom;
 
-    printf("Unesite duzinu niza: ");
-    scanf("%d", &n);
+//     printf("Unesite duzinu niza: ");
+//     scanf("%d", &n);
 
-    for(int i = 0; i < n; i++) {
-        scanf("%d", &niz[i]);
-    }
+//     for(int i = 0; i < n; i++) {
+//         scanf("%d", &niz[i]);
+//     }
 
-    for(int i = n - 1; i > 0 ; i--) {
-        for(int j = 0; j < i; j++) {
-            if(niz[j] > niz[j + 1]) {
-                pom = niz[j];
-                niz[j] = niz[j + 1];
-                niz[j + 1] = pom;
-            }
-        }
-    }
+//     for(int i = n - 1; i > 0 ; i--) {
+//         for(int j = 0; j < i; j++) {
+//             if(niz[j] > niz[j + 1]) {
+//                 pom = niz[j];
+//                 niz[j] = niz[j + 1];
+//                 niz[j + 1] = pom;
+//             }
+//         }
+//     }
 
-    
-}
+//     int brojPonavljanja = 0, target;
+
+//     for(int i = 0; i < n; i++) {
+//         if(niz[i] == niz[i + 1]) {
+//             int ponavljanja = 0;
+//             int broj = niz[i];
+//             for(int j = i; niz[j] == niz[i]; i++) {
+//                 ponavljanja++;
+//             }
+//             if (ponavljanja > brojPonavljanja) {
+//                 brojPonavljanja = ponavljanja;
+//                 target = broj;
+//             }
+//         }
+//     }
+
+//     printf("Trazeni broj je %d i ponavlja se %d puta", target, brojPonavljanja);
+// }
+
+
+// 10.45
+
+// int main() {
+//     int n, niz[MAX], zbir;
+
+//     printf("Unesite duzinu niza: ");
+//     scanf("%d", &n);
+//     for(int i = 0; i < n; i++) {
+//         scanf("%d", &niz[i]);
+//     }
+
+//     printf("Vrednost zbira dva elementa: ");
+//     scanf("%d", &zbir);
+
+//     for(int i = 0; i < n ; i++) {
+//         for(int j = i + 1; j < n; j++) {
+//             if(niz[i] + niz[j] == zbir) {
+//                 printf("Elemnti su %d i %d \n", niz[i], niz[j]);
+//                 break;
+//             }
+//         }
+//     }
+// }
 
 // 11.5
 
@@ -2520,6 +2563,59 @@ int main() {
 
 //     printf("\nSuma elemenata glavne dijagonele je %d", sumaGlavnaDijagonala);
 //     printf("\nSuma elemenata sporedne dijgaonale je %d", sporednaDi);
+// }
+
+// 11.6
+
+// int main() {
+//     int matrica[MAX][MAX], n;
+
+//     printf("Unesite broj kolona i vrsta: ");
+//     scanf("%d", &n);
+    
+//     for(int i = 0; i < n; i++) {
+//         for(int j = 0; j < n; j++) {
+//             scanf("%d", &matrica[i][j]);
+//         }
+
+//     }
+
+//     for(int i = 0; i < n; i++) {
+//         int suma = 0;
+//         for(int j = 0; j < n; j++) {
+//             suma += matrica[i][j];
+//         }
+//         printf("Suma %d kolone je %d \n", i + 1, suma);
+//     }
+// }
+
+// 11.7
+
+// int main() {
+
+//     int matrica[MAX][MAX], n, m, brVrsta;
+
+//     printf("Koliko vrsta: ");
+//     scanf("%d", &n);
+//     printf("Koliko kolona: ");
+//     scanf("%d", &m);
+
+//     for(int i = 0; i < n; i++) {
+//         for(int j = 0; j < m; j++) {
+//             scanf("%d", &matrica[i][j]);
+//         }
+//     }
+
+//     printf("Unesite broj vrste: ");
+//     scanf("%d", &brVrsta);
+//     int suma = 0;
+
+//     for(int i = 0; i < m; i++ ) {
+//         suma += matrica[brVrsta - 1][i];
+//     }
+
+//     printf("Suma je %d", suma);
+    
 // }
 
 
@@ -2675,8 +2771,8 @@ int main() {
 
 // }
 
-#include <ctype.h>
-#include <string.h>
+//............................
+
 
 // int main() {
 //     char niz[] = {'a', 'b', 'c', 'd', 'e', '\0'};

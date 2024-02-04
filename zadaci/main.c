@@ -2771,6 +2771,122 @@
 
 // }
 
+// 11.12
+
+// int main() {
+//     int n, m , matrica[MAX][MAX], transponovana[MAX][MAX];
+
+//     printf("Broj kolona: ");
+//     scanf("%d", &n);
+//     printf("Broj vrsta: ");
+//     scanf("%d", &m);
+
+//     for(int i = 0; i < n; i++) {
+//         for(int j = 0; j < m; j++) {
+//             scanf("%d", &matrica[i][j]);
+//         }
+//     }
+
+//     for(int i = 0; i < n; i++) {
+//         for(int j = 0; j < m; j++) {
+//             transponovana[j][i] = matrica[i][j];
+//         }
+//     }
+
+//     for(int i = 0; i < m; i++) {
+//         for(int j = 0; j < n; j++ ) {
+//             printf("%d ", transponovana[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+// }
+
+// 11.13
+
+// void ispisiNiz(int n, int *niz) {
+
+//     for(int i = 0; i < n; i++) {
+//         printf("%d ", niz[i]);
+//     }
+
+//     printf("\n");
+// }
+
+
+// int main() {
+//     int n, matrica[MAX][MAX];
+//     int najveciKolNiz[MAX], najmanjiKolNiz[MAX], najveciVrNiz[MAX], najmanjiVrNiz[MAX];
+//     int najveciKolona, najmanjiKolona, najveciVrsta, najmanjaVrsta;
+
+//     printf("Broj kolona i vrsta: ");
+//     scanf("%d", &n);
+
+//     for(int i = 0; i < n; i++) {
+//         for(int j = 0; j < n; j++) {
+//             scanf("%d", &matrica[i][j]);
+//         }
+//     }
+
+//     for(int i = 0; i < n; i++) {
+
+//          najveciKolona = matrica[0][i];
+//          najmanjiKolona = matrica[0][i];
+//          najveciVrsta = matrica[i][0];
+//          najmanjaVrsta = matrica[i][0];
+      
+//         for(int j = 0; j < n; j++) {
+//             if(matrica[i][j] > najveciVrsta) najveciVrsta = matrica[i][j];
+//             if(matrica[i][j] < najmanjaVrsta) najmanjaVrsta = matrica[i][j];
+//             if(matrica[j][i] > najveciKolona) najveciKolona = matrica[j][i];
+//             if(matrica[j][i] < najmanjiKolona) najmanjiKolona = matrica[j][i];
+//         }
+
+//         najveciKolNiz[i] = najveciKolona;
+//         najmanjiKolNiz[i] = najmanjiKolona;
+//         najveciVrNiz[i] = najveciVrsta;
+//         najmanjiVrNiz[i] = najmanjaVrsta;
+
+//     }
+
+//         printf("Najveci u vrstama: \n");
+//         ispisiNiz(n, najveciVrNiz);
+//         printf("Najmanji u vrstama: \n");
+//         ispisiNiz(n, najmanjiVrNiz);
+//         printf("Najveci u kolonama: \n");
+//         ispisiNiz(n, najveciKolNiz);
+//         printf("Najmanji u kolonama: \n");
+//         ispisiNiz(n, najmanjiKolNiz);
+        
+//         return 0;
+// }
+
+// 11.14
+
+// int main() {
+//     int n, m, k, A[MAX][MAX], B[MAX][MAX], C[MAX][MAX];
+
+//     printf("Unesite broj vrsta prve matrice: ");
+//     scanf("%d", &n);
+//     printf("Unesite broj kolona prve matrice: ");
+//     scanf("%d", &m);
+
+//     printf("Unesite broj kolona druge matrice: ");
+//     scanf("%d", &k);
+
+//     for(int i = 0; i < n; i++) {
+//         for(int j = 0; j < m; j++) {
+//             scanf("%d", A[i][j]);
+//         }
+//     }
+    
+//     for(int i = 0; i < m; i++) {
+//         for(int j = 0; j < k; j++) {
+//             scanf("%d", B[i][j]);
+//         }
+//     }
+// }
+
 //............................
 
 
@@ -2778,7 +2894,7 @@
 //     char niz[] = {'a', 'b', 'c', 'd', 'e', '\0'};
 
 //     int i = 0;
-//     while(niz[i] != '\0') {
+//     while(niz[i] != '\0') {  
 //         putchar(niz[i]);
 //         i++;
 //     }
@@ -2887,5 +3003,133 @@
 
 //     printf("Novi string: ");
 //     strcpy(prvi, drugi);
-//     printf("%s", prvi);s
+//     printf("%s", prvi);
 //     }
+
+//................................
+
+// 1.4
+
+// int main() {
+//     char s[MAX];
+//     printf("Unesite recenicu: ");
+//     gets(s);    
+//     puts(s);
+//     return 0;
+// }
+
+// 1.5
+
+// int main() {
+//     char ime[] = "Dalila";
+//     char prezime[MAX];
+//     puts("Unesite svoje prezime: ");
+//     gets(prezime);
+//     printf("Zdravo %s %s", ime, prezime);
+// }
+
+// 1.6
+
+// int main() {
+//     char poglavlja[10][100] = {"Operatori", "Ciklusi", "Skokovi", "Karakteri", "Nizovi"
+//  "Matrice", "Stringovi", "Pokazivaci", "Strukture", "Datoteke"};
+//  int n;
+
+//  printf("Unesite broj poglavlja: ");
+//  scanf("%d", &n);
+
+//  printf("Poglavlje broj %d je %s", n, poglavlja[n - 1]);
+
+//  return 0;
+// }
+
+// 1.8
+
+// int main() {
+//     char s[MAX];
+//     printf("unesite string: ");
+//     gets(s);
+
+//     int n = 0;
+//     while(s[n] != '\0') n++;
+
+//     printf("Duzina stringa je: %d", n);
+// }
+
+// 1.8
+
+// int main() {
+//     int n;
+//     char s[MAX];
+//     printf("unesite string: ");
+//     gets(s);
+
+//     n = strlen(s);
+//     printf("Duzina stringa je %d", n);
+// }
+
+// 1.8 
+
+// int main() {
+//     char s1[MAX], s2[MAX];
+//     printf("Unesite prvi string: ");
+//     gets(s1);
+//     printf("Unesite drugi string: ");
+//     gets(s2);
+
+//     if(strlen(s1) > strlen(s2)) printf("Prvi string je veci od drugog");
+//     else if(strlen(s2) > strlen(s1)) printf("Drugi string je veci od prvog");
+//     else printf("Stringovi su jednaki");
+// }
+
+// 1.9
+
+// int main() {
+//     char s1[MAX], s2[MAX];
+//     printf("Prvi string: ");
+//     gets(s1);
+//     printf("Drugi string: ");
+//     gets(s2);
+
+//     if(strcmp(s1, s2) == 0) printf("Stringovi su isti: ");
+//     else if(strcmp(s1, s2) > 0) printf("Prvi string je veci");
+//     else printf("Drugi string je veci");
+// }
+
+// 1.9
+
+// int main() {
+//     char s1[MAX], s2[MAX];
+
+//     printf("Unesite prvi string: ");
+//     gets(s1);
+//     printf("Unesite drugi sring: ");
+//     gets(s2);
+
+//     if(strncmp(s1, s2, 3) == 0) printf("Prva 3 karaktera od oba stringa su - ista");
+
+// }
+
+// 1.10
+
+// int main() {
+//     int s1[MAX], s2[MAX];
+//     printf("Unesite prvi string: ");
+//     scanf("%s", &s1);
+//     strcpy(s2, s1);
+//     printf("Drugi: ");
+//     puts(s2);
+// }
+
+// 1.10
+
+// int main() {
+//     int s1[MAX], s2[MAX];
+//     printf("Unesite prvi string: ");
+//     scanf("%s", &s1);
+//     strncpy(s2, s1, 3);
+//     printf("Novi string: ");
+//     puts(s2);
+// }
+
+

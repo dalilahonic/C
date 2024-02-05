@@ -3,6 +3,8 @@
 #define MAX 100
 #include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
+
 
 // int main() {
 
@@ -3126,10 +3128,302 @@
 // int main() {
 //     int s1[MAX], s2[MAX];
 //     printf("Unesite prvi string: ");
-//     scanf("%s", &s1);
+//     scanf("%s", &s1);{}
 //     strncpy(s2, s1, 3);
-//     printf("Novi string: ");
+//     printf("Novi string: ");{}
 //     puts(s2);
+// }
+
+//...............................................
+
+// 5.1
+
+// int main() {
+//     int br;
+//     FILE *dato;
+//     dato = fopen("podaci.txt", "w");
+
+//     if(dato == NULL) {
+//         printf("Greska prilikom otvaranja datoteke podaci.txt");
+//         exit(1);
+//     }
+
+//     for(int i = 0; i < 10; i++) {
+//         fprintf(dato, "%d ", i);
+//     }
+
+//     fclose(dato);
+
+//     dato = fopen("podaci.txt", "r");
+
+//     if(dato == NULL) {
+//         printf("Greska prilikom otvaranja datoteke");
+//         exit(1);
+//     }
+
+//     while(1) {
+//         fscanf(dato, "%d", &br);
+
+//         if(feof(dato)) break;
+
+//         printf("Procitano %d ", br);
+//     }
+
+//     fclose(dato);
+
+//     return 0;
+    
+// }
+
+// 5.2
+
+// int main() {
+
+//     FILE *dato;
+
+//     if((dato = fopen("podaci.txt", "a")) == NULL) {
+//         printf("Greska prilikom otvaranja datoteke podaci.txt");
+//         exit(1);
+//     }
+
+//     fprintf(dato, "Pozdrav svima\n");
+    
+//     fclose(dato);
+
+//     return 0;
+
+// }
+
+// 5.3
+
+// int main() {
+//     FILE *dato;
+
+//     int najmanji, najveci, broj;
+
+//     dato = fopen("brojevi.txt", "r");
+
+//     if(dato == NULL) {
+//         printf("Doslo je do greske");
+//         exit(1);
+//     }
+
+//     fscanf(dato, "%d", &broj);
+//     najmanji = broj;
+//     najveci = broj;
+
+//     while(fscanf(dato, "%d", &broj) != EOF) {
+//         if(broj < najmanji) najmanji = broj;
+//         if(broj > najveci) najveci = broj;
+//     }
+
+//     fclose(dato);
+
+//     printf("Najmanji broj je %d", najmanji);
+//     printf("Najveci broj je %d", najveci);
+
+// }
+
+// 5.4
+
+// int main() {
+//     FILE *a, *b;
+
+//     a = fopen("PrviBrojevi.txt", "r");
+
+//     if(a == NULL) {
+//         printf("...");
+//         exit(1);
+//     }
+
+//     b = fopen("DrugiBrojevi.txt", "w");
+
+//     if(b == NULL) {
+//         printf("...");
+//         exit(1);
+//     }
+
+//     int broj, i = 1;
+
+//     while(fscanf(a, "%d", &broj) != EOF) {
+//         if(i % 2 == 0) fprintf(b, "%d \n", broj);
+//         else fprintf(b, "%d \n", broj * 2);
+
+//         i++;
+//     }
+
+//     fclose(a);
+//     fclose(b);
+// }
+
+//....................................................................
+
+// int main() {
+//     FILE *datoteka;
+
+//     datoteka = fopen("text.txt", "w");
+
+//     for(int i = 0; i < 10; i++) {
+//         fprintf(datoteka, "%d \n", i);
+//     }
+
+//     fclose(datoteka);
+
+//     datoteka = fopen("text.txt", "r");
+
+//      if (datoteka == NULL) {
+//         printf("Greska \n");
+//         exit(1);
+//     }
+
+//     int br;
+
+//     while(fscanf(datoteka, "%d", &br) != EOF) {
+//         printf("%d \n", br);
+//     }
+
+//     return 0;
+// }
+
+// int main() {
+
+//     FILE *datoteka;
+//     datoteka = fopen("text.txt", "w");
+
+//     fprintf(datoteka, "ovo je string \n");
+//     fprintf(datoteka, "ovo je drugi string\n");
+    
+//     fclose(datoteka);
+
+//     datoteka = fopen("text.txt", "r");
+
+//     char string[MAX];
+
+//     while(fgets(string, MAX, datoteka ) != NULL) {
+//         printf("%s\n", string);
+//     }
+
+//     fclose(datoteka);
+// }
+
+// int main() {
+//     FILE *datoteka;
+
+//     datoteka = fopen("text.txt", "w");
+
+//     fputs("Ovo je super", datoteka);
+
+//     fclose(datoteka);
+
+// }
+
+//.....................
+
+// 5.1
+
+// int main() {
+//     FILE *datoteka;
+
+//     datoteka = fopen("text.txt", "w");
+
+//     for(int i = 0; i < 10; i++) {
+//         fprintf(datoteka, "%d \n", i);
+//     }
+
+//     fclose(datoteka);
+
+//     datoteka = fopen("text.txt", "r");
+
+//     int br;
+
+//     while(fscanf(datoteka, "%d", &br ) != EOF) {
+//         printf("%d", br);
+//     }
+
+//     fclose(datoteka);
+// }
+
+// 5.2
+
+// int main() {
+//     FILE *datoteka;
+
+//     datoteka = fopen("podaci.txt", "a");
+
+//     fputs("Pozdrav svima!", datoteka);
+
+//     fclose(datoteka);
+
+// }
+
+// 5.3
+
+// int main() {
+
+//     FILE *datoteka;
+//     int najmanji, najveci;
+
+//     datoteka = fopen("brojevi.txt", "r");
+
+//     if(datoteka == NULL) {
+//         printf("Greska");
+//         exit(1);
+//     }
+
+//     int br;
+
+//     while(fscanf(datoteka, "%d", &br) != EOF) {
+//         if(br > najveci) najveci = br;
+//         else if(br < najmanji) najmanji = br;
+//     }
+
+//     printf("Najmanji broj je %d\n", najmanji);
+//     printf("Najveci broj je %d\n", najveci);
+
+// }
+
+// 5.4
+
+// int main() {
+
+//     FILE *stari, *novi;
+
+//     stari = fopen("BrojeviStari.txt", "r");
+//     novi = fopen("BrojeviNovi.txt", "w");
+
+//     int br, i = 1;
+
+//     while(fscanf(stari, "%d", &br) != EOF) {
+//         if(i % 2 == 0) fprintf(novi, "%d\n", br);
+//         else fprintf(novi, "%d\n", br * 2);
+//         i++;
+//     }
+
+// }
+
+// 5.5
+
+// int main() {
+//     FILE *brojeviX, *brojeviY;
+
+//     brojeviX = fopen("BrojeviX.txt", "r");
+//     brojeviY = fopen("BrojeviY.txt", "w");
+
+//     int br, pom;
+
+//     while(fscanf(brojeviX, "%d", &br) != EOF) {
+//         pom = br;
+//         int cifra;
+//         while(pom > 0) {
+
+//             cifra = pom % 10;
+//             if(cifra == 3 || cifra == 7) {
+//                 fprintf(brojeviY, "%d\n", br);
+//                 break;
+//             }
+//             pom = pom / 10;   
+//         }
+//     }
 // }
 
 

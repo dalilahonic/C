@@ -3427,3 +3427,160 @@
 // }
 
 
+// 5.6
+
+// int main() {
+//     FILE *datoteka;
+
+//     datoteka = fopen("podaci6.txt", "w");
+
+//     if(datoteka == NULL) {
+//         printf("Doslo je do greske: ");
+//         exit(1);
+//     }
+
+//     fprintf(datoteka, "Ovo je datotka\n");
+//     fputs("pozdrav svima!\n", datoteka);
+//     fputs("123 + 456 = 579\n", datoteka);
+//     fputc('A', datoteka);
+//     fprintf(datoteka, "\n");
+//     fputs("Kraj datotke", datoteka);
+
+//     fclose(datoteka);
+
+// }
+
+// 5.7
+
+// int main() {
+//     FILE *datoteka;
+//     datoteka = fopen("podaci7.txt", "r");
+
+//     if(datoteka == NULL) {
+//         printf("Doslo je do greske: ");
+//         exit(1);
+//     }
+
+//     int brRedova = 0;
+//     int znak;
+
+//     while(znak = fgetc(datoteka) != EOF) {
+//         znak = fgetc(datoteka);        
+//         brRedova++;
+//     }
+
+//     printf("Broj redova jeste %d", brRedova);
+
+//     fclose(datoteka);
+// }
+
+// 5.8 
+
+// int main() {
+//     FILE *datoteka;
+
+//     datoteka = fopen("podaci6.txt", "r");
+
+//     char str[20];
+
+//     while(fgets(str, 20, datoteka) != NULL) {
+//         // printf("%s\n", str);
+//         puts(str); 
+//     }
+
+// }
+
+// 5.9
+
+// int main() {
+//     FILE *datoteka, *novaDatoteka;
+
+//     datoteka = fopen("podaci6.txt", "r");
+//     novaDatoteka = fopen("podaci6Novo.txt", "w");
+
+//     char str[MAX];
+
+//     while(fgets(str, MAX, datoteka) != NULL) {
+//         fputs(str, novaDatoteka);
+//     }
+
+//     fclose(datoteka);
+//     fclose(novaDatoteka);
+
+// }
+
+// 5.10 
+
+// int main() {
+//     FILE *datoteka, *datotekaNova;
+//     int n;
+//     printf("Unesite broj n: ");
+//     scanf("%d", &n);
+
+//     datoteka = fopen("podaci6.txt", "r");
+//     datotekaNova = fopen("podaci6Novo.txt", "w");
+
+//     char str[MAX];
+
+//     for(int i = 0; i < n; i++) {
+//         rewind(datoteka);
+//         while(fgets(str, MAX, datoteka) != NULL) {
+//             fputs(str, datotekaNova);
+//         };
+//     }
+
+//     fclose(datoteka);
+//     fclose(datotekaNova);
+// }
+
+// 5.13
+
+// int main() {
+
+//     FILE *dato;
+//     dato = fopen("podaci13.txt","w");
+//     if(dato==NULL) {
+
+//     printf("\n Greska pri otvaranju datoteke!");
+//     exit(1);
+//     }
+
+//     fputs("Pozdrav svima!", dato);
+//     fseek(dato, 10, SEEK_SET);
+//     fputs("etu", dato);
+//     fclose(dato);
+//     return 0;
+// }
+
+// 5.14
+
+// int main() {
+//     int br;
+//     FILE *datoteka;
+//     datoteka = fopen("podaci14.txt", "w");
+
+//     for(int i = 0; i < 3; i++) {
+
+//         printf("Unesite broj");
+//         scanf("%d", &br);
+
+//         fprintf(datoteka, "%d\n", br);
+
+//     }
+
+//     fclose(datoteka);
+
+//     int suma = 0;
+
+//     datoteka = fopen("podaci14.txt", "r");
+
+//     while(fscanf(datoteka, "%d", &br) != EOF) {
+//         suma += br;
+//         printf("%d\n", br);
+
+//     }
+
+//     printf("Suma brojeva je: %d", suma);
+// }
+
+//

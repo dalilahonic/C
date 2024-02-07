@@ -1435,6 +1435,47 @@
 
 // }
 
+// 10.11 
+
+// int main() {
+//     int n, m, nizA[MAX], nizB[MAX], nizC[MAX];
+
+//     printf("unesite duzinu prvog niza: ");
+//     scanf("%d", &n);
+//     printf("Unesite duzinu drugog niza: ");
+//     scanf("%d", &m);
+
+//     printf("Prvi niz: ");
+
+//     for(int i = 0; i < n; i++) {
+//         scanf("%d", &nizA[i]);
+//     }
+
+//     printf("Drugi niz: ");
+
+//     for(int i = 0; i < m; i++) {
+//         scanf("%d", &nizB[i]);
+//     }
+
+//     int x = 0;
+
+//     for(int i = 0; i < n; i++) {
+//         nizC[x] = nizA[i];
+//         x++; 
+//     }
+
+//     for(int i = 0; i < m; i++) {
+//         nizC[x] = nizB[i];
+//         x++;
+//     }
+
+//     printf("Niz C:");
+
+//     for(int i = 0; i < n + m; i++) {
+//         printf("Element: %d \n", nizC[i]);
+//     }
+// }
+
 // 10.12
 
     // int main() {
@@ -1935,10 +1976,9 @@
 //     scanf("%d", &n);
     
 //     for(int i = 0; i < n; i++) {
-
-
-
+//         scanf("%d", &niz[i]);
 //     }
+
 // }
 
 // 10.27
@@ -2170,7 +2210,6 @@
 //         if(i == 0) {
 //             pomocni = niz[i];
 //         } else {
-
 //             niz[i - 1] = niz[i];
 //         }
 //     }
@@ -2278,6 +2317,54 @@
 //         printf("%d ", noviNiz[i]);
 //     }
 // }
+
+// 10.38
+
+// void Sortiraj(int *niz, int n) {
+
+//     int pom;
+
+//     for(int i = n - 1; i > 0; i--) {
+//         for(int j = 0; j < i; j++) {
+//             if(niz[j] > niz[j + 1]) {
+//             pom = niz[j];
+//             niz[j] = niz[j + 1];
+//             niz[j + 1] = pom;
+//             }
+//         }
+//     }
+    
+// }
+
+// int main() {
+//     int niz[MAX], n, noviNiz[MAX], index = 0;
+
+//     printf("Unesite duzinu niza: ");
+//     scanf("%d", &n);
+
+//     printf("Unesite elemente niza: \n");
+//     for(int i = 0; i < n; i++) {
+//         scanf("%d", &niz[i]);
+//     }
+
+//     Sortiraj(niz, n);
+
+//     for(int i = 0; i < n; i++) {
+//         if(niz[i] == niz[i + 1] || niz[i] == niz[i - 1]) continue;
+
+//         noviNiz[index] = niz[i]; 
+//         index++;
+//     }
+
+//     printf("Novi niz: \n");
+
+//     for(int i = 0; i < index; i++) {
+//         printf("%d\n", noviNiz[i]);
+//     }
+
+//     return 0;
+// }
+
 
 // 10.39
 // Selection Sort - metoda izbora
@@ -2415,6 +2502,35 @@
 //         printf("%d ", uredenNiz[i]);
 //     }
 // }   
+
+// 10.42 
+
+// int main() {
+//     int niz[MAX], n, trazeni;
+
+//     printf("Unesite duzinu niza: ");
+//     scanf("%d", &n);
+
+//     for(int i = 0; i < n; i++) {
+//         scanf("%d", &niz[i]);
+//     }
+
+//     printf("Unesite trazeni element: ");
+//     scanf("%d", &trazeni);
+
+//     int i;
+
+//     for(i = n - 1; i > 0 && niz[i] > trazeni; i--) {
+
+//         niz[i + 1] = niz[i];
+
+//     }
+//     niz[i + 1] = trazeni;
+
+//     for(i = 0; i < n + 1; i++) {
+//         printf("%d\n", niz[i]);
+//     }
+// }
 
 // 10.43
 

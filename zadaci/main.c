@@ -2795,7 +2795,7 @@
 //         dijagonalni = matrica[i][i];
 //         for(int j = 0; j < redovi; j++) {
 //             if(dijagonalni == 0) {
-//                 if(j ==i) {
+//                 if(j == i) {
 //                     novaMatrica[i][j] = 1;
 //                 } else {
 //                 novaMatrica[i][j] = 0;
@@ -2979,7 +2979,7 @@
 //         return 0;
 // }
 
-// 11.14
+// 11.14 <3
 
 // int main() {
 //     int n, m, k, A[MAX][MAX], B[MAX][MAX], C[MAX][MAX];
@@ -2989,21 +2989,82 @@
 //     printf("Unesite broj kolona prve matrice: ");
 //     scanf("%d", &m);
 
-//     printf("Unesite broj kolona druge matrice: ");
-//     scanf("%d", &k);
+//     printf("Prva matrica: \n");
 
 //     for(int i = 0; i < n; i++) {
 //         for(int j = 0; j < m; j++) {
-//             scanf("%d", A[i][j]);
+//             scanf("%d", &A[i][j]);
 //         }
 //     }
+
+//     printf("Unesite broj kolona druge matrice: ");
+//     scanf("%d", &k);
+
+//     printf("Druga matrica: \n");
     
 //     for(int i = 0; i < m; i++) {
 //         for(int j = 0; j < k; j++) {
-//             scanf("%d", B[i][j]);
+//             scanf("%d", &B[i][j]);
 //         }
 //     }
+
+//     int suma;
+
+//     for(int i = 0; i < (m * k); i++) {
+//         for(int x = 0; x < k; x++) {
+//             suma = 0;
+//         for(int j = 0; j < m; j++) {
+//             suma += A[i][j] * B[j][x];
+//             }
+//             C[i][x] = suma;
+//         }
+//     }
+
+//     printf("A*B matrica: \n");
+
+//     for(int q = 0; q < n; q++) {
+//         for(int y = 0; y < k; y++) {
+//             printf("%d ", C[q][y]);
+//         }
+//         printf("\n");
+//     }
 // }
+
+// 11.15
+
+int main() {
+    int n, matrica[MAX][MAX], novaMatrica[MAX][MAX];
+
+    printf("Unesite broj vrsta i kolona matrice: ");
+    scanf("%d", &n);
+
+    int suma;
+
+    for(int i = 0; i < (n * n); i++) {
+        for(int k = 0; k < n; k++) {
+            suma = 0;
+
+        for(int j = 0; j < n; j++) {
+            suma = matrica[i][j] * matrica[j][k];
+
+        }
+        novaMatrica[i][k] = suma;
+        }
+    }
+
+    printf("Nova matrica: \n");
+
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
+            printf("%d", novaMatrica[i][j]);
+        }
+    }
+
+
+}
+
+    
+
 
 //............................
 
@@ -3124,7 +3185,7 @@
 //     printf("%s", prvi);
 //     }
 
-//................................
+//..........................................................................
 
 // 1.4
 
@@ -3700,3 +3761,4 @@
 // }
 
 //
+

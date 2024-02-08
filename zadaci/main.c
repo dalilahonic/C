@@ -3032,39 +3032,36 @@
 
 // 11.15
 
-int main() {
-    int n, matrica[MAX][MAX], novaMatrica[MAX][MAX];
+// int main() {
+//     int n, matrica[MAX][MAX], novaMatrica[MAX][MAX];
 
-    printf("Unesite broj vrsta i kolona matrice: ");
-    scanf("%d", &n);
+//     printf("Unesite broj vrsta i kolona matrice: ");
+//     scanf("%d", &n);
 
-    int suma;
+//     int suma;
 
-    for(int i = 0; i < (n * n); i++) {
-        for(int k = 0; k < n; k++) {
-            suma = 0;
+//     for(int i = 0; i < (n * n); i++) {
+//         for(int k = 0; k < n; k++) {
+//             suma = 0;
 
-        for(int j = 0; j < n; j++) {
-            suma = matrica[i][j] * matrica[j][k];
+//         for(int j = 0; j < n; j++) {
+//             suma = matrica[i][j] * matrica[j][k];
 
-        }
-        novaMatrica[i][k] = suma;
-        }
-    }
+//         }
+//         novaMatrica[i][k] = suma;
+//         }
+//     }
 
-    printf("Nova matrica: \n");
+//     printf("Nova matrica: \n");
 
-    for(int i = 0; i < n; i++) {
-        for(int j = 0; j < n; j++) {
-            printf("%d", novaMatrica[i][j]);
-        }
-    }
+//     for(int i = 0; i < n; i++) {
+//         for(int j = 0; j < n; j++) {
+//             printf("%d", novaMatrica[i][j]);
+//         }
+//     }
 
 
-}
-
-    
-
+// }
 
 //............................
 
